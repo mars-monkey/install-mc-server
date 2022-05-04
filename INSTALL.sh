@@ -5,7 +5,7 @@ echo "It was designed for Ubuntu 22.04 LTS. It will likely work with future rele
 echo "It will NOT work with other distros that do not use the APT package manager, i.e. RHEL, Arch, or openSUSE."
 
 # Check whether Java 17 is installed
-if [ -e /usr/bin/java ] && [ $(java --version]) == *"openjdk 17"* ]
+if [ -e /usr/bin/java ] && [ $(java --version) == *"openjdk 17"* ]
 then
 	java_installed="True"
 else
