@@ -68,9 +68,11 @@ cat eula.txt
 echo "Do you agree to the EULA? (y/n)"
 read agree_eula
 
-if [[ agree_eula == "y" ]]
+if [[ $agree_eula == "y" ]]
 then
-	echo "eula=true" 1>$parent_directory/eula.txt
+	rm eula.txt
+	touch eula.txt
+	echo "eula=true" >1$parent_directory/eula.txt
 else
 	echo "You must agree to the EULA to proceed with the server installation."
 	echo "Either run the script again and agree to the EULA, or manually change the 'eula=false' line in eula.txt to 'eula=true'."
