@@ -25,7 +25,7 @@ else
 fi
 
 # Ask to install Java automatically
-if [ $java_installed != "True" ]
+if [[ $java_installed != "True" ]]
 then
 	echo "You do not currently have the correct version of Java installed."
 	
