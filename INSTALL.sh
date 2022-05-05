@@ -50,7 +50,6 @@ then
 else
 	echo "You must install the correct version of Java to proceed with the server installation."
 	echo "Either run the script again as root and allow the script to install Java, or install openjdk-17-jre-headless yourself."
-	echo "
 	exit 256
 fi
 
@@ -77,7 +76,7 @@ read agree_eula
 
 if [ agree_eula == "y" ]
 then
-	echo "eula=true" 1>$pwd/eula.txt
+	echo "eula=true" 1>$parent_directory/eula.txt
 else
 	echo "You must agree to the EULA to proceed with the server installation."
 	echo "Either run the script again and agree to the EULA, or manually change the 'eula=false' line in eula.txt to 'eula=true'."
