@@ -8,6 +8,7 @@ then
 	rmdir /tmp/test_perms
 else
 	echo "This script was not run as root. You must run it as root to remove the Minecraft server."
+	exit 126
 fi
 
 rm /usr/bin/mc-start
@@ -30,3 +31,5 @@ if [[ $rm_git == "y" ]]
 then
 	apt-get remove git -y 1>/dev/null
 fi
+
+exit 0
