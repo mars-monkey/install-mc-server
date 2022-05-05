@@ -27,10 +27,6 @@ chmod +x INSTALL.sh
 ```
 sudo ./INSTALL.sh
 ```
-If you have already installed `openjdk-17-jre-headless`, you may run it as a normal user, like so:
-```
-./INSTALL.sh
-```
 
 ## Removal instructions
 1. Navigate to the `install-mc-server` directory.
