@@ -20,6 +20,8 @@ openSUSE: `zypper install git`
 2. Open a terminal at your preferred installation directory and type the following to download installation folder and enter it:
 ```
 git clone https://github.com/starship-boi/install-mc-server
+```
+```
 cd install-mc-server
 ```
 3. Give INSTALL.sh execution permissions with this command:
