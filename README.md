@@ -29,9 +29,9 @@ sudo ./INSTALL.sh
 ```
 
 ## Removal instructions
-1. Navigate to the `install-mc-server` directory.
+1. Navigate to the parent directory containing both `install-mc-server` and `mc-server`.
 
 2. Run the removal script with this command:
 ```
-sudo ./REMOVE.sh
+sudo ./install-mc-server/REMOVE.sh
 ```
