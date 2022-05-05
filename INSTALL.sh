@@ -68,7 +68,7 @@ cat eula.txt
 echo "Do you agree to the EULA? (y/n)"
 read agree_eula
 
-if [ agree_eula == "y" ]
+if [[ agree_eula == "y" ]]
 then
 	echo "eula=true" 1>$parent_directory/eula.txt
 else
