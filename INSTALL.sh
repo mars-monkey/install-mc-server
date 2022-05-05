@@ -72,8 +72,8 @@ read agree_eula
 
 if [[ $agree_eula == "y" ]]
 then
-	rm eula.txt
-	touch eula.txt
+	rm $parent_directory/mc-server/eula.txt
+	touch $parent_directory/mc-server/eula.txt
 	echo "eula=true" 1>$parent_directory/mc-server/eula.txt
 else
 	echo "You must agree to the EULA to proceed with the server installation."
