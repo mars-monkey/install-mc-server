@@ -14,6 +14,7 @@ Fedora: `dnf install git`
 
 openSUSE: `zypper install git`
 
+### Installation
 1. Navigate to your preferred installation directory. The server directory ```install-mc-server``` containing all the necessary files will be created here.
 
 2. Open a terminal at your preferred installation directory and type the following to download installation folder and enter it:
@@ -32,4 +33,12 @@ sudo ./INSTALL.sh
 If you have already installed ```openjdk-17-jre-headless```, you may run it as a normal user, like so:
 ```
 ./INSTALL.sh
+```
+
+## Removal instructions
+1. Navigate to the ```install-mc-server``` directory.
+
+2. Run the removal script with this command:
+```
+sudo ./REMOVE.sh
 ```
