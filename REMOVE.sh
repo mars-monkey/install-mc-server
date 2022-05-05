@@ -26,7 +26,7 @@ fi
 echo "Would you like the script to remove git? (y/N)"
 read rm_git
 
-if [[ $rm_git == "y"]]
+if [[ $rm_git == "y" ]]
 then
 	apt-get remove git -y 1>/dev/null
 fi
