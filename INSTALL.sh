@@ -27,7 +27,7 @@ then
 	if [[ $install_java == "y" ]]
 	then
 		echo "Installing openjdk 17..."
-		apt-get install openjdk-17-jre-headless -y >1/dev/null
+		apt-get install openjdk-17-jre-headless -y 1>/dev/null
 	
 		# Print error message from installation exit code
 		if [ $? == 0 ]
