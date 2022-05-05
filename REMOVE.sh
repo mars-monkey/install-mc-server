@@ -13,7 +13,6 @@ fi
 
 rm /usr/bin/mc-start
 
-cd ..
 rm -rf install-mc-server mc-server
 
 echo "Would you like the script to remove openjdk-17-jre-headless? (y/N)"
