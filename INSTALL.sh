@@ -6,6 +6,8 @@ echo "I might work with earlier versions of Ubuntu, Ubuntu derivatives, or other
 echo "It will NOT work with other distros that do not use the APT package manager, i.e. RHEL, Arch, or openSUSE."
 echo ""
 
+chmod +x REMOVE.sh
+
 # Test whether script is run as root
 mkdir /tmp/test_perms 2>/dev/null
 if [ $? == 0 ]
@@ -57,14 +59,14 @@ wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/312/downloa
 
 touch /usr/bin/mc-start
 chmod +x /usr/bin/mc-start
-echo "java -Xmx1G -jar $parent_directory/mc-server" 1>/usr/bin/mc-start
+echo "java -Xmx1G -jar $parent_directory/mc-server/paper-1.18.2-312.jar" 1>/usr/bin/mc-start
 
 # Sets up server files
 mc-start
 
 # Agree to EULA
 echo "You must agree to the Minecraft EULA to proceed with the server installation."
-cat eula.txt
+cat $parent_directory/mc-server/eula.txt
 echo "Do you agree to the EULA? (y/n)"
 read agree_eula
 
