@@ -6,13 +6,13 @@ A simple, interactive Bash script to install a PaperMC Minecraft server.
 ### Dependencies
 In order to install this program, you must have `git` installed. To make sure it is installed run the command for your distro as root:
 
-Debian:`apt install git`
+Debian: `apt install git`
 
-Arch:`pacman -S git`
+Arch: `pacman -S git`
 
-Fedora:`dnf install git`
+Fedora: `dnf install git`
 
-openSUSE:`zypper install git`
+openSUSE: `zypper install git`
 
 1. Navigate to your preferred installation directory. The server directory ```install-mc-server``` containing all the necessary files will be created here.
 
