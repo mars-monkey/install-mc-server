@@ -18,7 +18,7 @@ rm -rf install-mc-server mc-server
 echo "Would you like the script to remove openjdk-17-jre-headless? (y/N)"
 read rm_java
 
-if [[ $rm_java == "y"]]
+if [[ $rm_java == "y" ]]
 then
 	apt-get remove openjdk-17-jre-headless -y 1>/dev/null
 fi
