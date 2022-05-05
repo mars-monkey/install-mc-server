@@ -17,41 +17,33 @@ else
 fi
 
 # Check whether Java 17 is installed
-if [ -e /usr/bin/java ] && [[ $(java --version) == *"openjdk 17"* ]]
-then
-	java_installed="True"
-else
-	java_installed="False"
-fi
-
-# Ask to install Java automatically
-if [[ $java_installed != "True" ]]
+if [ ! -s /usr/bin/java ] || [[ $(java --version) != *"openjdk 17"* ]]
 then
 	echo "You do not currently have the correct version of Java installed."
 	
 	echo "Would you like the script to install the correct version of Java for you? (y/n)"
 	read install_java
-fi
-
-if [ $install_java == "y" ]
-then
-	echo "Installing openjdk 17..."
-	apt-get install openjdk-17-jre-headless -y >1/dev/null
 	
-	# Print error message from installation exit code
-	if [ $? == 0 ]
+	if [[ $install_java == "y" ]]
 	then
-		echo "Installation succeeded!"
-	elif [ $? == 126 ]
-	then
-		echo "Installation failed: insufficient permissions to execute command"
+		echo "Installing openjdk 17..."
+		apt-get install openjdk-17-jre-headless -y >1/dev/null
+	
+		# Print error message from installation exit code
+		if [ $? == 0 ]
+		then
+			echo "Installation succeeded!"
+		elif [ $? == 126 ]
+		then
+			echo "Installation failed: insufficient permissions to execute command"
+		else
+			echo "Installation failed: general error"
+		fi
 	else
-		echo "Installation failed: general error"
+		echo "You must install the correct version of Java to proceed with the server installation."
+		echo "Either run the script again as root and allow the script to install Java, or install openjdk-17-jre-headless yourself."
+		exit 256
 	fi
-else
-	echo "You must install the correct version of Java to proceed with the server installation."
-	echo "Either run the script again as root and allow the script to install Java, or install openjdk-17-jre-headless yourself."
-	exit 256
 fi
 
 cd ..
