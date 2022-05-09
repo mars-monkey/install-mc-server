@@ -1,6 +1,6 @@
 #!/bin/bash
 
-check_root {
+check_root () {
 	if [ -d /tmp/test_perms ]
 	then
 		echo "/tmp/test_perms exists and is a directory: please delete it to proceed."
@@ -17,7 +17,7 @@ check_root {
 	fi
 }
 
-install_java {
+install_java () {
 	echo "Installing openjdk 17..."
 	apt-get install openjdk-17-jre-headless -y 1>/dev/null
 	
