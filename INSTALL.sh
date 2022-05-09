@@ -66,14 +66,14 @@ mkdir mc-server
 cd mc-server
 
 # Download PaperMC server JAR file
-wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/312/downloads/paper-1.18.2-312.jar 1>/dev/null
+wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/331/downloads/paper-1.18.2-331.jar 1>/dev/null
 
 touch /usr/bin/mc-start
 chmod +x /usr/bin/mc-start
-echo "java -Xmx1G -jar $parent_directory/mc-server/paper-1.18.2-312.jar" 1>/usr/bin/mc-start
+echo "java -Xmx1G -jar $parent_directory/mc-server/paper-1.18.2-331.jar" 1>/usr/bin/mc-start
 
 # Sets up server files
-mc-start
+mc-start 1>/dev/null
 
 # Agree to EULA
 echo "You must agree to the Minecraft EULA to proceed with the server installation."
