@@ -1,17 +1,8 @@
 #!/bin/bash
 
-# Check for root
-mkdir /tmp/test_perms
+sudo echo ""
 
-if [ -d /tmp/test_perms ]
-then
-	rmdir /tmp/test_perms
-else
-	echo "This script was not run as root. You must run it as root to remove the Minecraft server."
-	exit 126
-fi
-
-rm /usr/bin/mc-start
+sudo rm /usr/bin/mc-start
 
 rm -rf install-mc-server mc-server
 
@@ -20,7 +11,7 @@ read rm_java
 
 if [[ $rm_java == "y" ]]
 then
-	apt-get remove openjdk-17-jre-headless -y 1>/dev/null
+	sudo apt-get remove openjdk-17-jre-headless -y 1>/dev/null
 fi
 
 echo "Would you like the script to remove git? (y/N)"
@@ -28,7 +19,7 @@ read rm_git
 
 if [[ $rm_git == "y" ]]
 then
-	apt-get remove git -y 1>/dev/null
+	sudo apt-get remove git -y 1>/dev/null
 fi
 
 exit 0
