@@ -27,7 +27,11 @@ read rm_script
 
 if [[ $rm_script == "y" ]]
 then
-	rm REMOVE.sh
+	touch /tmp/rm-REMOVE.sh
+	chmod +x /tmp/rm-REMOVE.sh
+	parent_directory=$(pwd)
+	echo "sleep 3 && rm $parent_directory/REMOVE.sh" > /tmp/rm-REMOVE.sh
+	./tmp/rm-REMOVE.sh
 fi
 
 exit 0
