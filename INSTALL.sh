@@ -23,6 +23,12 @@ echo "It will NOT work with other distros that do not use the APT package manage
 echo ""
 sudo echo ""
 
+cd ..
+parent_directory=$(pwd)
+cd install-mc-server
+
+mv REMOVE.sh $parent_directory/REMOVE.sh
+cd ..
 chmod +x REMOVE.sh
 
 # Check whether Java 17 is installed
@@ -42,9 +48,6 @@ then
 		exit 256
 	fi
 fi
-
-cd ..
-parent_directory=$(pwd)
 
 mkdir mc-server
 cd mc-server
