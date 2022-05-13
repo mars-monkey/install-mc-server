@@ -44,7 +44,7 @@ then
 		install_java
 	else
 		echo "You must install the correct version of Java to proceed with the server installation."
-		echo "Either run the script again as root and allow the script to install Java, or install openjdk-17-jre-headless yourself."
+		echo "Either run the script again and allow the script to install Java, or install openjdk-17-jre-headless yourself."
 		exit 256
 	fi
 fi
