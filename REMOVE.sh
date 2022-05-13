@@ -2,6 +2,8 @@
 
 sudo echo ""
 
+parent_directory=$(pwd)
+
 sudo rm /usr/bin/mc-start
 
 sudo rm -rf install-mc-server mc-server
@@ -30,7 +32,6 @@ then
 	touch /tmp/rm-REMOVE.sh
 	ls /tmp | grep REMOVE
 	chmod +x /tmp/rm-REMOVE.sh
-	parent_directory=$(pwd)
 	echo "sleep 3 && rm $parent_directory/REMOVE.sh" > /tmp/rm-REMOVE.sh
 	cat /tmp/rm-REMOVE.sh
 	./tmp/rm-REMOVE.sh
