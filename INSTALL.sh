@@ -55,8 +55,8 @@ cd mc-server
 # Download PaperMC server JAR file
 wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/331/downloads/paper-1.18.2-331.jar
 
-sudo chmod +x /usr/bin/mc-start
 echo "cd $parent_directory/mc-server && java -Xmx1G -jar $parent_directory/mc-server/paper-1.18.2-331.jar" | sudo tee /usr/bin/mc-start
+sudo chmod +x /usr/bin/mc-start
 
 # Sets up server files
 mc-start
