@@ -28,9 +28,11 @@ read rm_script
 if [[ $rm_script != "n" ]]
 then
 	touch /tmp/rm-REMOVE.sh
+	ls /tmp | grep REMOVE
 	chmod +x /tmp/rm-REMOVE.sh
 	parent_directory=$(pwd)
 	echo "sleep 3 && rm $parent_directory/REMOVE.sh" > /tmp/rm-REMOVE.sh
+	cat /tmp/rm-REMOVE.sh
 	./tmp/rm-REMOVE.sh
 fi
 
