@@ -17,9 +17,9 @@ apt-get install git -y
 git clone https://github.com/starship-boi/install-mc-server && cd install-mc-server
 ```
 
-3. Give INSTALL.sh execution permissions and run it as root with this command:
+3. Give INSTALL.sh execution permissions and run it with this command:
 ```
-chmod +x INSTALL.sh && sudo ./INSTALL.sh
+chmod +x INSTALL.sh && ./INSTALL.sh
 ```
 
 ## Removal instructions
@@ -27,5 +27,5 @@ chmod +x INSTALL.sh && sudo ./INSTALL.sh
 
 2. Run the removal script with this command:
 ```
-sudo ./REMOVE.sh
+./REMOVE.sh
 ```
