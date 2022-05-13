@@ -24,17 +24,4 @@ then
 	sudo apt-get remove git -y 1>/dev/null
 fi
 
-echo "Would you like the script to remove this script? (Y/n)"
-read rm_script
-
-if [[ $rm_script != "n" ]]
-then
-	touch /tmp/rm-REMOVE.sh
-	ls /tmp | grep REMOVE
-	chmod +x /tmp/rm-REMOVE.sh
-	echo "sleep 3 && rm $parent_directory/REMOVE.sh" > /tmp/rm-REMOVE.sh
-	cat /tmp/rm-REMOVE.sh
-	./tmp/rm-REMOVE.sh
-fi
-
 exit 0
