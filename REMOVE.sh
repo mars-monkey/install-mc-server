@@ -4,7 +4,7 @@ sudo echo ""
 
 sudo rm /usr/bin/mc-start
 
-rm -rf install-mc-server mc-server
+sudo rm -rf install-mc-server mc-server
 
 echo "Would you like the script to remove openjdk-17-jre-headless? (y/N)"
 read rm_java
