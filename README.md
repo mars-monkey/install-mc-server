@@ -29,3 +29,5 @@ chmod +x INSTALL.sh && ./INSTALL.sh
 ```
 ./REMOVE.sh
 ```
+
+3. Delete `REMOVE.sh`.
