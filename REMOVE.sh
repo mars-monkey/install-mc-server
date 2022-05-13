@@ -22,4 +22,12 @@ then
 	sudo apt-get remove git -y 1>/dev/null
 fi
 
+echo "Would you like the script to remove this script? (Y/n)"
+read rm_script
+
+if [[ $rm_script == "y" ]]
+then
+	rm REMOVE.sh
+fi
+
 exit 0
