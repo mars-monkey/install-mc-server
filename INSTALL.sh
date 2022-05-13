@@ -79,7 +79,7 @@ else
 	exit 256
 fi
 
-sudo chown $parent_directory/mc-server $USER
+sudo chown $USER $parent_directory/mc-server
 
 echo "The server installation is complete. You may start the server by typing 'mc-start' at the terminal."
 echo "You may want to change some basic server settings. These are stored at $pwd/mc-server/server.properties."
