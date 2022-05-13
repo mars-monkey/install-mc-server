@@ -2,7 +2,7 @@
 
 install_java () {
 	echo "Installing openjdk 17..."
-	sudo apt-get install openjdk-17-jre-headless -y 1>/dev/null
+	sudo apt-get install openjdk-17-jre-headless -y
 	
 	# Print error message from installation exit code
 	if [ $? == 0 ]
@@ -53,14 +53,13 @@ mkdir mc-server
 cd mc-server
 
 # Download PaperMC server JAR file
-wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/331/downloads/paper-1.18.2-331.jar 1>/dev/null
+wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/331/downloads/paper-1.18.2-331.jar
 
-sudo touch /usr/bin/mc-start
 sudo chmod +x /usr/bin/mc-start
-sudo echo "cd $parent_directory/mc-server && java -Xmx1G -jar $parent_directory/mc-server/paper-1.18.2-331.jar" 1>/usr/bin/mc-start
+echo "cd $parent_directory/mc-server && java -Xmx1G -jar $parent_directory/mc-server/paper-1.18.2-331.jar" | sudo tee /usr/bin/mc-start
 
 # Sets up server files
-mc-start 1>/dev/null
+mc-start
 
 # Agree to EULA
 echo "You must agree to the Minecraft EULA to proceed with the server installation."
