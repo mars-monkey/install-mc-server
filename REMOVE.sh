@@ -25,7 +25,7 @@ fi
 echo "Would you like the script to remove this script? (Y/n)"
 read rm_script
 
-if [[ $rm_script == "y" ]]
+if [[ $rm_script != "n" ]]
 then
 	touch /tmp/rm-REMOVE.sh
 	chmod +x /tmp/rm-REMOVE.sh
