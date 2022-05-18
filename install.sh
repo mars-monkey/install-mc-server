@@ -24,9 +24,9 @@ cd ..
 parent_directory=$(pwd)
 cd install-mc-server
 
-mv REMOVE.sh $parent_directory/REMOVE.sh
+mv remove.sh $parent_directory/remove.sh
 cd ..
-chmod +x REMOVE.sh
+chmod +x remove.sh
 
 # Check whether Java 17 is installed
 if [ ! -s /usr/bin/java ] || [[ $(java --version) != *"openjdk 17"* ]]
