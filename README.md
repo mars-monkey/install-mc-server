@@ -2,7 +2,9 @@
 A simple, interactive Bash script to install a PaperMC Minecraft server.
 
 ## Supported platforms
-This script was developed in WSL Ubuntu 22.04, however, my goal is for it to work with all possible versions and derivatives of Ubuntu. Currently all Ubuntu-based distros from 18.04 and onward are supported.
+Distros based on the following and later versions are supported:
+* Ubuntu 18.04
+* Debian 11
 
 ## Installation Instructions
 
