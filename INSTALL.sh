@@ -52,7 +52,7 @@ cd mc-server
 # Download PaperMC server JAR file
 wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/331/downloads/paper-1.18.2-331.jar
 
-echo "cd $parent_directory/mc-server && java -Xmx1G -jar $parent_directory/mc-server/paper-1.18.2-331.jar" | sudo tee /usr/bin/mc-start
+echo "cd $parent_directory/mc-server && java -Xmx1G -jar $parent_directory/mc-server/paper-1.18.2-331.jar -nogui" | sudo tee /usr/bin/mc-start
 sudo chmod +x /usr/bin/mc-start
 
 # Sets up server files
@@ -61,7 +61,7 @@ mc-start
 # Agree to EULA
 echo "You must agree to the Minecraft EULA to proceed with the server installation."
 cat $parent_directory/mc-server/eula.txt
-echo "Do you agree to the EULA? (y/n)"
+echo "Do you agree to the EULA? (y/N)"
 read agree_eula
 
 if [[ $agree_eula == "y" ]]
@@ -78,5 +78,5 @@ fi
 sudo chown $USER $parent_directory/mc-server
 
 echo "The server installation is complete. You may start the server by typing 'mc-start' at the terminal."
-echo "You may want to change some basic server settings. These are stored at $pwd/mc-server/server.properties."
+echo "You may want to change some basic server settings. These are stored at $parent_directory/mc-server/server.properties."
 exit 0
