@@ -17,11 +17,8 @@ install_java () {
 }
 
 echo "This script installs the PaperMC Minecraft server for Minecraft version 1.18.2."
-echo "It was designed for Ubuntu 22.04 LTS. It will likely work with future releases of Ubuntu."
-echo "I might work with earlier versions of Ubuntu, Ubuntu derivatives, or other Debian derivatives."
-echo "It will NOT work with other distros that do not use the APT package manager, i.e. RHEL, Arch, or openSUSE."
+echo "For information on supported platforms, see README.md"
 echo ""
-sudo echo ""
 
 cd ..
 parent_directory=$(pwd)
