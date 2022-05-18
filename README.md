@@ -22,7 +22,7 @@ git clone https://github.com/starship-boi/install-mc-server && cd install-mc-ser
 
 3. Give INSTALL.sh execution permissions and run it with this command:
 ```
-chmod +x INSTALL.sh && ./INSTALL.sh
+chmod +x install.sh && ./install.sh
 ```
 
 ## Removal instructions
@@ -30,7 +30,7 @@ chmod +x INSTALL.sh && ./INSTALL.sh
 
 2. Run the removal script with this command:
 ```
-./REMOVE.sh
+./remove.sh
 ```
 
-3. Delete `REMOVE.sh`.
+3. Delete `remove.sh`.
