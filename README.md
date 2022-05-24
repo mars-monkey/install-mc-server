@@ -22,7 +22,7 @@ sudo apt-get install git -y
 git clone https://github.com/starship-boi/install-mc-server && cd install-mc-server
 ```
 
-3. Give INSTALL.sh execution permissions and run it with this command:
+3. To give INSTALL.sh execution permissions and run it, use this command:
 ```
 chmod +x install.sh && ./install.sh
 ```
