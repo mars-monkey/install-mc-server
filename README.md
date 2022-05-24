@@ -9,9 +9,9 @@ Distros based on the following and later versions are supported:
 ## Installation Instructions
 
 ### Dependencies
-In order to install this program, you must have `git` installed. To make sure it is installed run this command as root:
+In order to install this program, you must have `git` installed. To make sure it is installed run this command:
 ```
-apt-get install git -y
+sudo apt-get install git -y
 ```
 
 ### Installation
@@ -26,6 +26,13 @@ git clone https://github.com/starship-boi/install-mc-server && cd install-mc-ser
 ```
 chmod +x install.sh && ./install.sh
 ```
+
+## Launch the Server
+Open a terminal anywhere and type the following command to start the Minecraft server:
+```
+mc-start
+```
+This will spit out a bunch of text, but once you see 'Timings reset' then you can type commands of your own if you want. The commands are the same as in game Minecraft commands, except you don't need to type '/' at the beginning.
 
 ## Removal instructions
 1. Navigate to the parent directory containing both `install-mc-server` and `mc-server`.
