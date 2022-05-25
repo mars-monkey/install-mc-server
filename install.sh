@@ -1,24 +1,23 @@
 #!/bin/bash
 
 install_java () {
-	echo "Installing openjdk 17..."
+	echo -e "\e[44mInstalling openjdk 17...\e[0m"
 	sudo apt-get install openjdk-17-jre-headless -y
 	
 	# Print error message from installation exit code
 	if [ $? == 0 ]
 	then
-		echo "Installation succeeded!"
+		echo -e "\e[44mInstallation succeeded!\e[0m"
 	elif [ $? == 126 ]
 	then
-		echo "Installation failed: insufficient permissions to execute command"
+		echo -e "\e[44mInstallation failed: insufficient permissions to execute command\e[0m"
 	else
-		echo "Installation failed: general error"
+		echo -e "\e[44mInstallation failed: general error\e[0m"
 	fi
 }
 
-echo "This script installs the PaperMC Minecraft server for Minecraft version 1.18.2."
-echo "For information on supported platforms, see README.md"
-echo ""
+echo -e "\e[44mThis script installs the PaperMC Minecraft server for Minecraft version 1.18.2.\e[0m"
+echo -e "\e[44mFor information on supported platforms, see README.md\e[0m"
 
 cd ..
 parent_directory=$(pwd)
@@ -31,17 +30,17 @@ chmod +x remove.sh
 # Check whether Java 17 is installed
 if [ ! -s /usr/bin/java ] || [[ $(java --version) != *"openjdk 17"* ]]
 then
-	echo "You do not currently have the correct version of Java installed."
+	echo -e "\e[44mYou do not currently have the correct version of Java installed.\e[0m"
 	
-	echo "Would you like the script to install the correct version of Java for you? (y/n)"
+	echo -e "\e[44mWould you like the script to install the correct version of Java for you? (y/n)\e[0m"
 	read autoinst_java
 	
 	if [[ $autoinst_java == "y" ]]
 	then
 		install_java
 	else
-		echo "You must install the correct version of Java to proceed with the server installation."
-		echo "Either run the script again and allow the script to install Java, or install openjdk-17-jre-headless yourself."
+		echo -e "\e[44mYou must install the correct version of Java to proceed with the server installation.\e[0m"
+		echo -e "\e[44mEither run the script again and allow the script to install Java, or install openjdk-17-jre-headless yourself.\e[0m"
 		exit 256
 	fi
 fi
@@ -59,9 +58,9 @@ sudo chmod +x /usr/bin/mc-start
 mc-start
 
 # Agree to EULA
-echo "You must agree to the Minecraft EULA to proceed with the server installation."
+echo -e "\e[44mYou must agree to the Minecraft EULA to proceed with the server installation.\e[0m"
 cat $parent_directory/mc-server/eula.txt
-echo "Do you agree to the EULA? (y/N)"
+echo -e "\e[44mDo you agree to the EULA? (y/N)\e[0m"
 read agree_eula
 
 if [[ $agree_eula == "y" ]]
@@ -70,13 +69,13 @@ then
 	touch $parent_directory/mc-server/eula.txt
 	echo "eula=true" 1>$parent_directory/mc-server/eula.txt
 else
-	echo "You must agree to the EULA to proceed with the server installation."
-	echo "Either run the script again and agree to the EULA, or manually change the 'eula=false' line in eula.txt to 'eula=true'."
+	echo -e "\e[44mYou must agree to the EULA to proceed with the server installation.\e[0m"
+	echo -e "\e[44mEither run the script again and agree to the EULA, or manually change the 'eula=false' line in eula.txt to 'eula=true'.\e[0m"
 	exit 256
 fi
 
 sudo chown $USER $parent_directory/mc-server
 
-echo "The server installation is complete. You may start the server by typing 'mc-start' at the terminal."
-echo "You may want to change some basic server settings. These are stored at $parent_directory/mc-server/server.properties."
+echo -e "\e[44mThe server installation is complete. You may start the server by typing 'mc-start' at the terminal.\e[0m"
+echo -e "\e[44mYou may want to change some basic server settings. These are stored at $parent_directory/mc-server/server.properties.\e[0m"
 exit 0
