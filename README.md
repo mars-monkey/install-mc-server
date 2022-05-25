@@ -5,6 +5,7 @@ A simple, interactive Bash script to install a PaperMC Minecraft server.
 Distros based on the following and later versions are supported:
 * Ubuntu 18.04
 * Debian 11
+
 Containers that are tightly integrated with the host system may not work; shared filesystems can cause problems with Distrobox or Chrome OS Linux containers. It is recommended to use VMs or bare metal.
 
 ## Installation Instructions
