@@ -9,9 +9,9 @@ Distros based on the following and later versions are supported:
 ## Installation Instructions
 
 ### Dependencies
-In order to install this program, you must have `git` installed. To make sure it is installed run this command:
+In order to install this program, you must have `git` and `wget` installed. To install them, run this command
 ```
-sudo apt-get install git -y
+sudo apt-get install git wget -y
 ```
 
 ### Installation
