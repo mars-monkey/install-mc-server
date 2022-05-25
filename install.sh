@@ -58,7 +58,7 @@ sudo chmod +x /usr/bin/mc-start
 mc-start
 
 # Agree to EULA
-echo -e "\e[44mYou must agree to the Minecraft EULA to proceed with the server installation.\e[0m"
+echo -e "\e[44mYou must agree to the Minecraft EULA to proceed with the server installation. (https://www.minecraft.net/en-us/eula)\e[0m"
 cat $parent_directory/mc-server/eula.txt
 echo -e "\e[44mDo you agree to the EULA? (y/N)\e[0m"
 read agree_eula
@@ -76,6 +76,6 @@ fi
 
 sudo chown $USER $parent_directory/mc-server
 
-echo -e "\e[44mThe server installation is complete. You may start the server by typing 'mc-start' at the terminal.\e[0m"
+echo -e "\e[44mThe server installation is complete. You may start the server by typing 'mc-start' at the terminal. See README.md for further instructions\e[0m"
 echo -e "\e[44mYou may want to change some basic server settings. These are stored at $parent_directory/mc-server/server.properties.\e[0m"
 exit 0
