@@ -12,7 +12,7 @@ sudo chown $USER [your parent directory]/mc-server
 ```
 where [your parent directory] is the directory into which you cloned the git repository.
 
-If you don't want to/know how to do that, stick to running the script directly on your computer or in a completely isolated container/virtualized environment.
+If you don't want to or don't know how to do that, stick to running the script directly on your computer or in a completely isolated container/virtualized environment.
 
 ## Installation Instructions
 
