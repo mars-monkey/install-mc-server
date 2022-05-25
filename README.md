@@ -6,7 +6,13 @@ Distros based on the following and later versions are supported:
 * Ubuntu 18.04
 * Debian 11
 
-Containers that are tightly integrated with the host system may not work; shared filesystems can cause problems with Distrobox or Chrome OS Linux containers. It is recommended to use VMs or bare metal.
+Containers that share a filesystem with the host may cause problems with the `chown` command at the end. If this happens, type the following:
+```
+sudo chown $USER [your parent directory]/mc-server
+```
+where [your parent directory] is the directory into which you cloned the git repository.
+
+If you don't want to/know how to do that, stick to running the script directly on your computer or in a completely isolated container/virtualized environment.
 
 ## Installation Instructions
 
