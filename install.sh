@@ -41,7 +41,7 @@ then
 	else
 		echo -e "\e[44mYou must install the correct version of Java to proceed with the server installation.\e[0m"
 		echo -e "\e[44mEither run the script again and allow the script to install Java, or install openjdk-17-jre-headless yourself.\e[0m"
-		exit 256
+		exit 3
 	fi
 fi
 
@@ -71,7 +71,7 @@ then
 else
 	echo -e "\e[44mYou must agree to the EULA to proceed with the server installation.\e[0m"
 	echo -e "\e[44mEither run the script again and agree to the EULA, or manually change the 'eula=false' line in eula.txt to 'eula=true'.\e[0m"
-	exit 256
+	exit 3
 fi
 
 sudo chown $USER $parent_directory/mc-server
